@@ -1,0 +1,8 @@
+print(
+    Fore.RED + "This sentence is the color of ketchup " +
+    Fore.GREEN + "sentence is the color of grasss" +
+    Back.YELLOW + "has color of the sun" +
+    Fore.BLUE + "changing to the sea " +
+    Back.MAGENTA + "highlights THis has my favorite magenta color" +
+    Style.BRIGHT + "and colors are bright in this!"
+)
