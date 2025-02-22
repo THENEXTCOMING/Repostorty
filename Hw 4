@@ -1,18 +1,18 @@
-class Animal:
+class Crocodile:
     def __init__(self, species):
         self.species = species
     
     def make_sound(self):
         return "crocodile sound"
 
-class Vehicle:
+class Rabbit:
     def __init__(self, speed):
         self.speed = speed
     
     def move(self):
         return f"Moving at {self.speed} km/h"
 
-class Hybrid(Animal, Vehicle):
+class Hybrid(Crocodile, Rabbit):
     def __init__(self, species, speed, name):
         Animal.__init__(self, species)
         Vehicle.__init__(self, speed)
@@ -21,7 +21,7 @@ class Hybrid(Animal, Vehicle):
     def describe(self):
         return f"{self.name} is a {self.species} that moves at {self.speed} km/h."
 
-hybrid_creature = Hybrid("Crocodile", 50, "CrocoCar")
+hybrid_creature = Hybrid("Crocodile", 50, "Crocobit")
 print(hybrid_creature.describe()) 
 print(hybrid_creature.make_sound()) 
 print(hybrid_creature.move())       
