@@ -1,0 +1,22 @@
+class Animal:
+    def __init__(self, species):
+        self.species = species
+
+    def make_sound(self):
+        return "crocodile sound"
+
+
+class Vehicle:
+    def __init__(self, speed):
+        self.speed = speed
+
+    def move(self):
+        return f"Moving at {self.speed} km/h"
+
+
+class Hybrid(Animal, Vehicle):
+    def __init__(self, species, speed, name):
+        Vehicle.__init__("toyota", 50)
+        self.name = name
+        self.species=species'
+
