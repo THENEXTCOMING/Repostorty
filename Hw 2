@@ -1,0 +1,12 @@
+class Cat:
+    def __init__(self, name: object, age: object, weight: object, sleep: object, eat: object):
+        self.name = name
+        self.age = age
+        self.weight = weight
+        self.sleep = sleep
+        self.eat = eat
+
+
+Dolly = Cat("Felix", 4, 12, 12, "one spoon of cat meal")
+print(Cat)
+print("Dolly is eating food")
