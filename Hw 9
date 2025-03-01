@@ -1,11 +1,10 @@
 import logging
 import time
 
-# Configure logging
 logging.basicConfig(
     filename="simulation.log",  # Log file
     level=logging.INFO,  # Set log level
-    format="%(asctime)s - %(levelname)s - %(message)s",  # Format logs
+    format="%(asctime)s - %(levelname)s - %(message)s", 
 )
 
 class SimulationLogger:
@@ -22,14 +21,14 @@ class SimulationLogger:
 if __name__ == "__main__":
     SimulationLogger.log_event("Simulation started")
 
-    for i in range(3):  # Simulating
-        time.sleep(1)  # Simulating time passing
+    for i in range(3): 
+        time.sleep(1) 
         SimulationLogger.log_event(f"Agent moved to position {i}", level="INFO")
 
     SimulationLogger.log_event("Simulation encountered a minor issue", level="WARNING")
     
     try:
-        # Simulating an error
+     
         raise ValueError("AI pathfinding error")
     except ValueError as e:
         SimulationLogger.log_event(f"Error: {str(e)}", level="ERROR")
