@@ -1,13 +1,17 @@
-class MyIterable:
-    def __init__(self, start, end):
+class IterableWithGenerator:
+    def __init__(self, start, stop):
         self.start = start
-        self.end = end
+        self.stop = stop
 
     def __iter__(self):
-        for i in range(self.start, self.end):
-            yield i
+        return self.generator() 
 
-my_iterable = MyIterable(1, 5)
+    def generator(self):
+        for i in range(self.start, self.stop):
+            yield i 
 
-for value in my_iterable:
-    print(value)
+
+iterable_obj = IterableWithGenerator(1, 5)
+
+for gen in iterable_obj:
+    print(gen)
