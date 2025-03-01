@@ -2,15 +2,14 @@ import logging
 import time
 
 logging.basicConfig(
-    filename="simulation.log",  # Log file
-    level=logging.INFO,  # Set log level
+    filename="simulation.log",
+    level=logging.INFO, 
     format="%(asctime)s - %(levelname)s - %(message)s", 
 )
 
 class SimulationLogger:
     @staticmethod
     def log_event(event: str, level="INFO"):
-        """Logs simulation events with different severity levels."""
         if level == "INFO":
             logging.info(event)
         elif level == "WARNING":
